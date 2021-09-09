@@ -1,7 +1,7 @@
 const submitBtn = () => {
     const inputFiled = document.getElementById('input-filed')
     const inputText = inputFiled.value;
-    let regEx = /gmail/
+    let regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     console.log(regEx.test(inputText));
     if (regEx.test(inputText) === true) {
         document.getElementById('valid').classList.add('d-block')
